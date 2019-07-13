@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta author="Neven Jevtić"/>
+    <title>Minolovec</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="customScript.js"></script>
+</head>
+<body>
+    <br><br>
+    <div class="container">
+        <div class="row justify-content-center">
+            <img id="logo" src="icons/colorfulMinesweeper.svg">
+            <div class="h1">Minesweeper</div>
+        </div>
+        <br><br>
+        <div id="naRezultate" class="row justify-content-center">
+            <a href="rezultati.html">
+                <button class="btn btn-large btn-warning">Rezultati</button>
+            </a>
+        </div>
+        <br><br>
+        <div class="row">
+            <!-- nastavi spremenljivko running, ki bo služila trem namenom. opozori igralca če klikne na rezultat med igro, prepreči igralcu da začne novo igro medtem ko ta že teče -->
+            <div class="col-md-6">
+                <label class="h4" for="doloci-polje">Določi velikost polja: <span id="dolociPolje" class="slider-number"></span></label>
+            </div>
+            <div class="col-md-6">
+                &nbsp 5
+                <input type="range" value="15" class="slider range-slider" id="poljeSlider" min="5" max="15">
+                15
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <label class="h4" for="doloci-gostoto">Določi gostoto min: <span id="dolociPokritost" class="slider-number"></span></label>
+            </div>
+            <div class="col-md-6">
+                15
+                <input type="range" value="15" class="slider range-slider" id="pokritostSlider" min="20" max="50">
+                50
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="btn col-md-5 float-left">Čas <span id="ure">0</span>:<span id="minute">0</span>:<span id="sekunde">0</span> </div>
+            <button class="btn btn-success col-md-2" id="gumbZacni">Začni igro</button>
+            <div class="btn col-md-5">Število min: <span id="mine">0</span></div>
+        </div>
+        <br><br><br>
+        <div class="row justify-content-center" id="polje">
+            <table id="tabela">
+
+            </table>
+        </div>
+        <div id="rezultati" class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="usr">Ime igralca:</label>
+                    <input type="text" class="form-control" id="usr">
+                </div>
+                <div class="form-group">
+                    <label for="stMin">Odstotek min:</label>
+                    <span id="stMin"></span>
+                </div> 
+                <div class="form-group">
+                    <label for="velikostPolja">Velikost polja:</label>
+                    <span id="velikostPolja"></span>
+                </div> 
+                <div class="form-group">
+                    <label for="casResevanja">Čas reševanja:</label>
+                    <span id="ura"></span> : <span id="minuta"></span> : <span id="sekunda"></span>
+                </div>
+                <div class="form-group float-right">
+                    <button id="novaIgra" class="btn btn-success">Nova igra</button>
+                    <button id="redirectRez" class="btn btn-warning">Rezultati</button>
+                </div>
+            </div>
+        </div>
+        <footer class="page-footer font-small blue fixed-bottom">
+            <!-- Copyright -->
+            <div hidden class="footer-copyright text-center py-3">Credits:
+                <br>
+                <div>Icons made by <a href="https://www.flaticon.com/authors/smalllikeart" title="smalllikeart">smalllikeart</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+                <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+                <div>Icons made by <a href="https://www.flaticon.com/authors/smalllikeart" title="smalllikeart">smalllikeart</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+                <div>Icons made by <a href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+            </div>
+            <!-- Copyright -->
+
+            </footer>
+    </div>
+</body>

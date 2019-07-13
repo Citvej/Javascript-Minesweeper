@@ -1,0 +1,125 @@
+.slider{
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    background: #d3d3d3;
+    width: 80%;
+    outline: none;
+}
+
+center{
+    margin-left: auto;
+}
+
+.slider-number{
+    color: #d3d3d3;
+}
+
+#tabela{
+}
+
+#tabela td{
+    border: 0.1em solid silver;
+    padding: 0;
+}
+/*
+#tabela td span{
+    height: 2em;
+    width: 2em;
+    
+}
+*/
+
+td div{
+    height: 3em;
+    width: 3em;
+    padding: 0;
+    background-size: 100%;
+    text-align: center;
+}
+
+.tdPokrito{
+    background: #979aaa;
+    background-size: 100%;
+}
+
+#tdNevarno{
+
+}
+
+.odkrito{
+    -webkit-animation: fadein 2s; 
+       -moz-animation: fadein 2s; 
+        -ms-animation: fadein 2s; 
+         -o-animation: fadein 2s; 
+            animation: fadein 2s;
+}
+
+#rezultati{
+    z-index: 999;
+    top: 15vh;
+    left: 50%;
+    position: absolute;
+}
+
+#rezultati > div{
+    border: 1px solid black;
+    padding: 70px;
+    position: fixed;
+    background-color: #f7d794;
+}
+
+
+
+.class1{
+    background: url("icons/one.png")
+}
+
+.class2{
+    background: url("icons/two.png")
+}
+
+.class3{
+    background: url("icons/three.png")
+}
+
+.class4{
+    background: url("icons/four.png")
+}
+
+.class5{
+    background: url("icons/five.png")
+}
+
+.class6{
+    background: url("icons/six.png")
+}
+
+.class7{
+    background: url("icons/seven.png")
+}
+
+.class8{
+    background: url("icons/eight.png")
+}
+
+.bomb{
+    background-image: url("icons/emptySkull50.png");
+}
+
+.final{
+    background-color: #e84118;
+}
+
+.flag{
+    background: url("icons/flag.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#logo{
+    height: 3em;
+    width: 3em;
+    margin-right: 0.3em;
+}
+
